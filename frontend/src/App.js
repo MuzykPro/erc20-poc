@@ -22,7 +22,7 @@ function App() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    minHeight: '80vh',
+    minHeight: '70vh',
   };
 
   const boxStyle = {
@@ -192,8 +192,8 @@ function App() {
                     )}
                     {txHash && (
                       <div style={{ marginTop: '10px' }}>
-                        <p style={{ color: 'green',  fontSize: '14px'}}>
-                        Tokens minted successfully! View transaction on Etherscan:{' '}
+                        <p style={{ color: 'green', fontSize: '14px' }}>
+                          Tokens minted successfully! View transaction on Etherscan:{' '}
                           <a
                             href={`https://sepolia.etherscan.io/tx/${txHash}`}
                             target="_blank"
@@ -240,7 +240,7 @@ function App() {
               </button>
             )
           ) : (
-            <p>Please install MetaMask to use this application.</p>
+            <p style={{textAlign: 'center'}}>Please install MetaMask to use this application.</p>
           )}
         </div>
       </div>
@@ -248,7 +248,19 @@ function App() {
       <div style={{ padding: '20px', textAlign: 'center' }}>
         {/* Add your instructions here */}
         <p>
-          <em>Instructions: ...</em>
+          <h2>Instructions:</h2><br></br>
+         
+              1. ERC20 token smart contract is deployed to Sepolia test network:&nbsp;
+              <a href={`https://sepolia.etherscan.io/address/0x5354013600Ac9F5751d48774e542b9f1f7F11249`}
+                target="_blank"
+                rel="noopener noreferrer">
+                0x5354013600Ac9F5751d48774e542b9f1f7F11249
+              </a><br></br><br></br>
+            
+            2. There is one admin wallet with ability to mint tokens: 0x190977eDB9Ff66Fc5e594b858f96A0dab3736b3f<br></br><br></br>
+            3. Admin's private key to import in Metamask: *Sent on LinkedIn*<br></br><br></br>
+            4. When minted, tokens can be transferred to any account using wallet of your choice (e.g. Metamask)<br></br><br></br>
+          
         </p>
       </div>
     </div>
